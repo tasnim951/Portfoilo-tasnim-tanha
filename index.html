@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio of Tasnim Akther Tanha</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FADADD",
+            secondary: "#D1C4E9",
+            "background-light": "#FAFAFA",
+            "background-dark": "#18181b",
+            "text-light": "#6B7280",
+            "text-dark": "#D1D5DB",
+            "heading-light": "#111827",
+            "heading-dark": "#F9FAFB",
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+          },
+          borderRadius: {
+            xl: "20px",
+            "2xl": "24px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Tech Card Style -->
+  <style>
+    .tech-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      background: white;
+      transition: all 0.3s ease;
+    }
+    .dark .tech-card {
+      background: #27272a;
+    }
+    .tech-card:hover {
+      transform: translateY(-4px);
+    }
+    .tech-card i {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="w-full px-6 py-8 flex justify-end gap-6 text-xs font-bold tracking-[0.2em] uppercase">
+    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">Contact</a>
+    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">Projects</a>
+    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">About</a>
+  </nav>
+
+  <!-- Hero -->
+  <main class="container mx-auto px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center">
+    <div class="lg:w-1/2">
+      <h1 class="font-display text-6xl lg:text-8xl font-bold leading-tight text-heading-light dark:text-heading-dark">
+        <span class="block text-2xl font-medium text-gray-400">I am</span>
+        Tasnim Akther Tanha
+      </h1>
+    </div>
+
+    <div class="lg:w-1/2 lg:pl-16 mt-10 lg:mt-0 flex flex-col">
+      <p class="text-text-light dark:text-text-dark max-w-md leading-relaxed mb-10">
+        A Junior Frontend Developer with hands-on experience in HTML, CSS, JavaScript, and basic Node.js. Currently learning Next.js and building projects to grow my skills.
+      </p>
+
+      <div class="flex gap-4 mb-10">
+        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
+          <span class="text-[10px] font-bold tracking-widest uppercase">Li</span>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
+          <span class="text-[10px] font-bold tracking-widest uppercase">Fb</span>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
+          <span class="text-[10px] font-bold tracking-widest uppercase">In</span>
+        </a>
+      </div>
+
+      <a href="https://shorturl.at/xO9fT" target="_blank"
+        class="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-full hover:scale-105 transition">
+        <span class="material-symbols-outlined">download</span>
+        Download Resume
+      </a>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section class="container mx-auto px-6 lg:px-20 py-24">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+
+      <!-- About Text -->
+      <div class="lg:col-span-8">
+        <h2 class="font-display text-6xl lg:text-7xl font-bold mb-10 text-heading-light dark:text-heading-dark">
+          About
+        </h2>
+
+        <p class="text-lg leading-relaxed text-text-light dark:text-text-dark">
+          I focus on building practical web applications with clean structure and responsive design. My work involves using HTML, Tailwind CSS, JavaScript, and React.js, along with backend fundamentals like Node.js, Express.js, and MongoDB.
+        </p>
+
+        <p class="mt-6 text-lg leading-relaxed text-text-light dark:text-text-dark">
+          I’m currently learning Next.js and improving my development workflow by building projects and following best practices.
+        </p>
+      </div>
+
+      <!-- Role Card -->
+      <div class="lg:col-span-4">
+        <div class="bg-gray-100 dark:bg-zinc-800 rounded-2xl p-8 border-l-4 border-primary">
+          <span class="block text-sm uppercase tracking-widest text-gray-500 mb-2">Current Role</span>
+          <span class="block text-3xl font-display font-bold">
+            <span class="text-black">Frontend</span> 
+            Developer
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="mt-24">
+      <h3 class="font-display text-3xl font-bold mb-10">Tech Stack</h3>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
+        <div class="tech-card"><i class="fab fa-html5 text-orange-500"></i>HTML</div>
+        <div class="tech-card"><i class="fab fa-css3-alt text-cyan-500"></i>Tailwind</div>
+        <div class="tech-card"><i class="fab fa-js text-yellow-400"></i>JavaScript</div>
+        <div class="tech-card"><i class="fab fa-react text-blue-400"></i>React</div>
+        <div class="tech-card"><i class="fab fa-node text-green-600"></i>Node.js</div>
+        <div class="tech-card"><i class="fas fa-server text-gray-500"></i>Express</div>
+        <div class="tech-card"><i class="fas fa-database text-green-500"></i>MongoDB</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="container mx-auto px-6 lg:px-20 py-24">
+    <h2 class="text-6xl font-extrabold tracking-tight text-gray-400 mb-12 opacity-40">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
+      <!-- HTML -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-html5-plain colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">HTML</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">90%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 90%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-css3-plain colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">CSS</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">85%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 85%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-javascript-plain colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">JavaScript</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">80%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 80%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- React.js -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-react-original colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">React.js</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">75%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 75%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- Node.js -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-nodejs-plain colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">Node.js</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">70%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 70%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- Express.js -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-express-original text-3xl text-gray-800"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">Express.js</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">65%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 65%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="group relative">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <i class="devicon-mongodb-plain colored text-3xl"></i>
+            <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">MongoDB</span>
+          </div>
+          <span class="text-sm font-bold text-gray-500">60%</span>
+        </div>
+        <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 60%; background-color: #e1adad;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-400 dark:text-gray-600">
+    © 2024 Tasnim Portfolio
+  </footer>
+
+</body>
+</html>
