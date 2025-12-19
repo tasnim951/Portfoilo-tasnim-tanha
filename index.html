@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio of Tasnim Akther Tanha</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -30,56 +32,52 @@
             "text-dark": "#D1D5DB",
             "heading-light": "#111827",
             "heading-dark": "#F9FAFB",
+            "surface-light": "#F3F4F6",
+            "surface-dark": "#1F2937",
+            "heading-grey": "#9CA3AF",
           },
           fontFamily: {
-            sans: ["DM Sans", "sans-serif"],
-            display: ["Playfair Display", "serif"],
+            sans: ["DM Sans", "Poppins", "sans-serif"],
+            display: ["Playfair Display", "Poppins", "serif"],
           },
           borderRadius: {
             xl: "20px",
             "2xl": "24px",
+            DEFAULT: "1rem",
           },
         },
       },
     };
   </script>
 
-  <!-- Tech Card Style -->
   <style>
-    .tech-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 1.5rem;
-      border-radius: 1.25rem;
-      background: white;
-      transition: all 0.3s ease;
-    }
-    .dark .tech-card {
-      background: #27272a;
-    }
-    .tech-card:hover {
-      transform: translateY(-4px);
-    }
-    .tech-card i {
-      font-size: 2rem;
+    body {
+      min-height: max(884px, 100dvh);
     }
   </style>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
 
   <!-- Navigation -->
-  <nav class="w-full px-6 py-8 flex justify-end gap-6 text-xs font-bold tracking-[0.2em] uppercase">
-    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">Contact</a>
-    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">Projects</a>
-    <a href="#" class="hover:text-gray-500 dark:hover:text-primary">About</a>
+  <nav class="fixed top-0 left-0 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-12">
+      <div class="flex justify-between h-16 items-center">
+        <div class="text-2xl font-bold text-heading-light dark:text-heading-dark">Tasnim<span class="text-primary">.</span></div>
+        <div class="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-xs">
+          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">Home</a>
+          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">About</a>
+          <a href="#" class="text-primary font-bold">Projects</a>
+          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">Contact</a>
+        </div>
+        <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle Dark Mode" onclick="document.documentElement.classList.toggle('dark')">
+          <span class="material-icons text-gray-600 dark:text-gray-300">brightness_4</span>
+        </button>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero -->
-  <main class="container mx-auto px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center">
+  <main class="container mx-auto px-6 lg:px-12 py-28 flex flex-col lg:flex-row items-center">
     <div class="lg:w-1/2">
       <h1 class="font-display text-6xl lg:text-8xl font-bold leading-tight text-heading-light dark:text-heading-dark">
         <span class="block text-2xl font-medium text-gray-400">I am</span>
@@ -104,7 +102,7 @@
         </a>
       </div>
 
-      <a href="https://shorturl.at/xO9fT" target="_blank"
+      <a href="https://shorturl.at/xO9fT" target="_blank" rel="noopener" 
         class="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-full hover:scale-105 transition">
         <span class="material-symbols-outlined">download</span>
         Download Resume
@@ -115,55 +113,35 @@
   <!-- About -->
   <section class="container mx-auto px-6 lg:px-20 py-24">
     <div class="grid lg:grid-cols-12 gap-16 items-start">
-
-      <!-- About Text -->
       <div class="lg:col-span-8">
         <h2 class="font-display text-6xl lg:text-7xl font-bold mb-10 text-heading-light dark:text-heading-dark">
           About
         </h2>
-
         <p class="text-lg leading-relaxed text-text-light dark:text-text-dark">
           I focus on building practical web applications with clean structure and responsive design. My work involves using HTML, Tailwind CSS, JavaScript, and React.js, along with backend fundamentals like Node.js, Express.js, and MongoDB.
         </p>
-
         <p class="mt-6 text-lg leading-relaxed text-text-light dark:text-text-dark">
           I’m currently learning Next.js and improving my development workflow by building projects and following best practices.
         </p>
       </div>
 
-      <!-- Role Card -->
       <div class="lg:col-span-4">
-        <div class="bg-gray-100 dark:bg-zinc-800 rounded-2xl p-8 border-l-4 border-primary">
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border-l-4 border-primary">
           <span class="block text-sm uppercase tracking-widest text-gray-500 mb-2">Current Role</span>
-          <span class="block text-3xl font-display font-bold">
-            <span class="text-black">Frontend</span> 
-            Developer
+          <span class="block text-3xl font-display font-bold text-heading-light dark:text-heading-dark">
+            Frontend Developer
           </span>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Tech Stack -->
-    <div class="mt-24">
-      <h3 class="font-display text-3xl font-bold mb-10">Tech Stack</h3>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
-        <div class="tech-card"><i class="fab fa-html5 text-orange-500"></i>HTML</div>
-        <div class="tech-card"><i class="fab fa-css3-alt text-cyan-500"></i>Tailwind</div>
-        <div class="tech-card"><i class="fab fa-js text-yellow-400"></i>JavaScript</div>
-        <div class="tech-card"><i class="fab fa-react text-blue-400"></i>React</div>
-        <div class="tech-card"><i class="fab fa-node text-green-600"></i>Node.js</div>
-        <div class="tech-card"><i class="fas fa-server text-gray-500"></i>Express</div>
-        <div class="tech-card"><i class="fas fa-database text-green-500"></i>MongoDB</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
+<!-- Skills -->
   <section class="container mx-auto px-6 lg:px-20 py-24">
     <h2 class="text-6xl font-extrabold tracking-tight text-gray-400 mb-12 opacity-40">Skills</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-10">
-      <!-- HTML -->
+      
+      <!-- Skill Item -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -173,11 +151,10 @@
           <span class="text-sm font-bold text-gray-500">90%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 90%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 90%;"></div>
         </div>
       </div>
 
-      <!-- CSS -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -187,11 +164,10 @@
           <span class="text-sm font-bold text-gray-500">85%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 85%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 85%;"></div>
         </div>
       </div>
 
-      <!-- JavaScript -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -201,11 +177,10 @@
           <span class="text-sm font-bold text-gray-500">80%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 80%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 80%;"></div>
         </div>
       </div>
 
-      <!-- React.js -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -215,11 +190,10 @@
           <span class="text-sm font-bold text-gray-500">75%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 75%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 75%;"></div>
         </div>
       </div>
 
-      <!-- Node.js -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -229,25 +203,23 @@
           <span class="text-sm font-bold text-gray-500">70%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 70%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 70%;"></div>
         </div>
       </div>
 
-      <!-- Express.js -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
-            <i class="devicon-express-original text-3xl text-gray-800"></i>
+            <i class="devicon-express-original text-3xl text-gray-800 dark:text-gray-300"></i>
             <span class="text-xl font-semibold text-gray-800 dark:text-gray-300">Express.js</span>
           </div>
           <span class="text-sm font-bold text-gray-500">65%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 65%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 65%;"></div>
         </div>
       </div>
 
-      <!-- MongoDB -->
       <div class="group relative">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-3">
@@ -257,16 +229,157 @@
           <span class="text-sm font-bold text-gray-500">60%</span>
         </div>
         <div class="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-          <div class="h-full bg-accent-pink-dark rounded-full transition-all duration-1000" style="width: 60%; background-color: #e1adad;"></div>
+          <div class="h-full bg-pink-300 rounded-full transition-all duration-1000" style="width: 60%;"></div>
         </div>
       </div>
     </div>
-  </section>
+  </section>
+   
+<section id="projects-part-1" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="mb-16 text-left">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-500 tracking-tight">Projects</h1>
+  </div>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-gray-400 dark:text-gray-600">
-    © 2024 Tasnim Portfolio
-  </footer>
+  <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24 mb-32 group">
+    <!-- Food Lover Network -->
+    <div class="w-full md:w-1/2">
+      <div class="relative rounded-lg overflow-hidden bg-blue-50 dark:bg-gray-800 flex items-center justify-center p-8 aspect-square md:aspect-auto md:h-[400px]">
+        <img alt="Food Lover Network 3D Illustration" class="w-auto h-full object-contain transform transition duration-500 group-hover:scale-105 drop-shadow-2xl" src="images/project1.png" />
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">FOOD LOVER NETWORK</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
+        A comprehensive platform for food enthusiasts to discover, share, and rate recipes. Featuring a dynamic search engine and user profile management system.
+      </p>
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-x-6 gap-y-3">
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="MongoDB" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVUcWHTVDEOMwchuorJr-u8JW2T8XHNox-uRwbtcT71XmvTj-Op461p1m_NfRBkzbEOX1m6uI-yUWqqq1GUI1XceJPlk17Nn5Xu6q0OKESra5esoxuSqYwPSjQlsZI9IlWhD1p9sTGhuWeBcU0KDZC2lRRw2BJQRdflaq282hVCDThitSkhd-ps2juxLqUeS971xXBZTj2t1CTtjnQIhaZHXXpa4VfAtkAki-LASQdNDVWtbROzwVmjZQQ1RkMDJULDFaESczl6WBg"/>
+            <span>MongoDB</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Express" class="w-5 h-5 dark:invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPkdHnVp-koTNYk1dK7jDqL3EesvrX8abYJNdPVi5mYGo0ML8SVZBP3yIiONlVX__ABQ3brPleV2Usfl7_MytFgjCsyDpMuNo7grJIVuuYwA9ERFYa63ia-troxCMe6r3Z2ddRfMqvmEGgUBk8XKX-8rWRvSiUpRA8C-63de3_KUVq5oW7mUFnrk6FgmljA4Q3XG--pvc6RGXspOz8XJVMQn3WGDV2DvrV5TsZkf3m5nUtLrk-Viuyo6WTJw3kMmIn0crnjHGQdFqR"/>
+            <span>Express.js</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="React" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX9_pRZj6iwGdbKT0F6oXPqSWgLOQRmwgZc94L6ogIHw7mlO4gyzGNTKcqFYaI9O5zV-hEIaM7nuqpRZDAOV2daYCghhiG7By_Jn432saiurpjs-UKxWj8lCEYJBKHNGQjyc70KtjeVkAuqyOX2oY31EPU-R05Xsc4DPHIYLymhLrOjxREWGL5aY7lDjCuIgqFewnzl761lgfagSjiYAh3bYnefiP-1IlC_iU-OQwLYYUz3iEYHsniXEGuBDSTPQkVUZjr0XBXPQn_"/>
+            <span>React.js</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Node" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJf8uBtfJmTIk0xkKFzr-WQ8TN3MPqkyV50Fb_GnRkdiYdEg5eeTCQW37KuA1v_4L8_UMuCMVPnjmvR4rNK8Cxl-Hv44CGcesRcpqD1I13SkoJT49eit8efdcBRPU1Jq0zpMXD2ul5eeupOI9vPoFA5va7HUFSeFKj_WIysLZlbMCwq6uDv6ES7HobcRPNHhvyXZEuGann6vGuq5EYKJWTKG-kxzNFj7MmhyLwg_7AKu6eF5EUWAd_Bvzsb8goPnUhloPwzQSLRsSr"/>
+            <span>Node.js</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Firebase" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC804sH0Vw55-tLxnW1e2DYYPOgfwhHtJxPYRVvFCHlP-eb-v_1zPLz6uNbRBcUCiDXkbhIniXxPsROMYay3bd18NXBvV-sCuBgu5D_lr9eXxx4QTDXTqvuBqrlgMEoeqpx8kLhaVCHtXMJbM46Toa61XtGXos96WMkreT0TUK79UF52yNf00vTVkIkKUc6wQrk9yjGAuWKS1-r1AUp4It7GVQ2GA1VqQVXttyREi9emX7YRvHJMT72vQNlI5UopKHr78jQHVJOJ4wd"/>
+            <span>Firebase Auth</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Tailwind" class="w-5 h-5 text-cyan-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzR-KXebMA9_mSoP8IIWHvNz5hDWrJ4C0lGSDTBZbcLXEoxGuELt3hf470-v7t9F4KUsvnTHViDs7rkjhOD4WByWT-dkaCU4Bk1V3jXRdURI3SF8ezhLJh9Ig_sc1AZ9IsEMK9PkwYTHEVSXLrsTAw95iD1pI8mQg3ZjZb9omWj4FdfL6NQk4dZG4ogZp_o1drjsENhLp3Mbjpz70Q2vxNhnBTG_aFHRHFPgp-UC0f1T_rNmajAOkeJPzPNHbb2hkDEuirRywftE-W"/>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-6 text-gray-400">
+        <a class="hover:text-primary transition-colors duration-300" href="#" title="GitHub Client">
+          <span class="material-icons text-2xl">code</span>
+        </a>
+        <a class="hover:text-primary transition-colors duration-300" href="#" title="GitHub Server">
+          <span class="material-icons text-2xl">dns</span>
+        </a>
+        <a class="hover:text-primary transition-colors duration-300" href="#" title="Live Demo">
+          <span class="material-icons text-2xl">open_in_new</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-</body>
-</html>
+  <div class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-24 mb-32 group">
+    <!-- GameHub -->
+    <div class="w-full md:w-1/2">
+      <div class="relative rounded-lg overflow-hidden bg-pink-100 dark:bg-gray-800 flex items-center justify-center p-8 aspect-square md:aspect-auto md:h-[400px]">
+        <img alt="GameHub 3D Illustration" class="w-auto h-full object-contain transform transition duration-500 group-hover:scale-105 drop-shadow-2xl" src="images/project2.png" />
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col justify-center text-left md:items-end md:text-right">
+      <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">GameHub</h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
+        A Game Library application that allows users to explore, rate, and curate their video game collections. Includes smooth animations and personalized recommendations.
+      </p>
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-x-6 gap-y-3 md:justify-end">
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="React" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGX7gKJeEdprt9R8E4iaJL0pHTrCTCepycKnGZ73RvWf2XXYqLvtDrxShv6VooQkwvbhkfvubjvu03OmaPLrYIw8_QMeNAlazkzxHitXp96PfxbOCqbzxwR_0a8i-saLvmUtByKRfC7tSRl3H5M97WA0uH_EYHWOpzIZrP_3Z1EKqBcoZKUjcwRR0MxazLv1t55ZWtPYcOLatxaoGj4aUtkxmVjZC9sex7iYc4BuAXpMYH-w5GwRQ0zlZl0tUwa50OMWu_3oAr2CpV"/>
+            <span>React.js</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Firebase" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlHtv2srBBGmp5aHC70nL2tFtkIMrI4aRvJuP-VZtU3UQGI4P2Z1XI1dhhHNM7TehCYpSzspOw-zkZrXlOGqRN_AKCYADi5sBbq-zaBYbbydNXCYcMyYf_u_iT63Z4-CO2SZs9NRQMOsFmGA2lX3zR4BHNAPmcEs4OBYzIZ9gZAKZ-8Eqxvfe04SdCJJDtGnqIXMX0xc4BJ2apjkR62UvodeC7hbJY6WPqE3iHvrL8uP08ro4oDJGYLQxNYlHEFaYni8rpynUObv1q"/>
+            <span>Firebase Auth</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <img alt="Tailwind" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA25bwUn5Q6RDiJecaKKxHiky33lJX8Kd80ffPAADAl6kJ0c3Eox8PVBwPlyuLzBq4wQ8GqBg1Ut1g60N7pw0NDaPMl6IZGB0RNLugE3GhMcPEoTRQZ3N-zdiVNJKkfbIo-or6iRxKeDNJ_EXrJMSDGw5PQ3HuajIJs3CgvrUc51y3kp3xcqZAYYNrVQrD-2ETXgjewsDyhYFoUHHduH-EB8tTikhl4R02ODCHXx-tpwW2bCrI08Ge2R8MMH1lCIPtE4jHx8tQBESVN"/>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+            <span class="material-icons text-purple-500 text-[20px]">animation</span>
+            <span>Framer Motion</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-6 text-gray-400 justify-end">
+        <a class="hover:text-primary transition-colors duration-300" href="#" title="GitHub">
+          <span class="material-icons text-2xl">code</span>
+        </a>
+        <a class="hover:text-primary transition-colors duration-300" href="#" title="Live Demo">
+          <span class="material-icons text-2xl">open_in_new</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24 mb-32 group">
+  <!-- Third Project -->
+  <div class="w-full md:w-1/2">
+    <div class="relative rounded-lg overflow-hidden bg-green-50 dark:bg-gray-800 flex items-center justify-center p-8 aspect-square md:aspect-auto md:h-[400px]">
+      <img alt="Third Project Illustration" class="w-auto h-full object-contain transform transition duration-500 group-hover:scale-105 drop-shadow-2xl" src="images/project3.png" />
+    </div>
+  </div>
+  <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">THIRD PROJECT TITLE</h2>
+    <p class="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
+      A detailed description of the third project goes here. Describe the project's purpose, features, technologies used, and anything else important to highlight.
+    </p>
+    <div class="mb-8">
+      <div class="flex flex-wrap gap-x-6 gap-y-3">
+        <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+          <img alt="Technology 1" class="w-5 h-5" src="https://via.placeholder.com/20" />
+          <span>Technology 1</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+          <img alt="Technology 2" class="w-5 h-5" src="https://via.placeholder.com/20" />
+          <span>Technology 2</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+          <img alt="Technology 3" class="w-5 h-5" src="https://via.placeholder.com/20" />
+          <span>Technology 3</span>
+        </div>
+        <!-- Add more tech items as needed -->
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-6 text-gray-400">
+      <a class="hover:text-primary transition-colors duration-300" href="#" title="GitHub Client">
+        <span class="material-icons text-2xl">code</span>
+      </a>
+      <a class="hover:text-primary transition-colors duration-300" href="#" title="Live Demo">
+        <span class="material-icons text-2xl">open_in_new</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+
+
