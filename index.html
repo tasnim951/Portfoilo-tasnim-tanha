@@ -56,90 +56,156 @@
     }
   </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
+<body id= "home" class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-12">
-      <div class="flex justify-between h-16 items-center">
-        <div class="text-2xl font-bold text-heading-light dark:text-heading-dark">Tasnim Akther Tanha<span class="text-primary">.</span></div>
-        <div class="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-xs">
-          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">Home</a>
-          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">About</a>
-          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">Projects</a>
-          <a href="#" class="hover:text-gray-500 dark:hover:text-primary transition">Contact</a>
-        </div>
-        <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle Dark Mode" onclick="document.documentElement.classList.toggle('dark')">
-          <span class="material-icons text-gray-600 dark:text-gray-300">brightness_4</span>
-        </button>
+<nav class="fixed top-0 left-0 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-12">
+    <div class="flex justify-between h-16 items-center">
+      <div class="text-2xl font-bold text-heading-light dark:text-heading-dark">
+        Tasnim Akther Tanha<span class="text-primary">.</span>
       </div>
+      <div class="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-xs">
+        <a href="#home" class="hover:text-gray-500 dark:hover:text-primary transition">Home</a>
+        <a href="#about" class="hover:text-gray-500 dark:hover:text-primary transition">About</a>
+        <a href="#projects" class="hover:text-gray-500 dark:hover:text-primary transition">Projects</a>
+        <a href="#contact" class="hover:text-gray-500 dark:hover:text-primary transition">Contact</a>
+      </div>
+      <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Toggle Dark Mode" onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-icons text-gray-600 dark:text-gray-300">brightness_4</span>
+      </button>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero -->
- <main class="container mx-auto px-6 lg:px-12 pt-28 pb-16 flex flex-col lg:flex-row items-center">
+ <main class="container mx-auto px-6 lg:px-12 pt-24 pb-16 flex flex-col lg:flex-row items-center">
 
-    <div class="lg:w-1/2">
-      <h1 class="font-display text-6xl lg:text-7xl font-bold leading-tight text-heading-light dark:text-heading-dark">
-        <span class="block text-2xl font-medium text-gray-400">I am</span>
-     Tasnim <br>
-       <span class="text-gray-400 text-xl">Akther</span>
-        Tanha
-      </h1>
-    </div>
+  <!-- LEFT / NAME -->
+ <div class="lg:w-1/2 text-center lg:text-left">
+  <h1 class="font-display font-bold leading-tight text-heading-light dark:text-heading-dark">
 
-    <div class="lg:w-1/2 lg:pl-16 mt-10 lg:mt-0 flex flex-col">
-      <p class="text-text-light dark:text-text-dark max-w-md leading-relaxed mb-10">
-        A Junior Frontend Developer with hands-on experience in HTML, CSS, JavaScript, and basic Node.js. Currently learning Next.js and building projects to grow my skills.
-      </p>
+    <!-- ROLE / INTRO -->
+    <span class="block text-2xl sm:text-3xl text-gray-400 mb-2">I'm</span>
 
-      <div class="flex gap-4 mb-10">
-        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
-          <span class="text-[10px] font-bold tracking-widest uppercase">Li</span>
-        </a>
-        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
-          <span class="text-[10px] font-bold tracking-widest uppercase">Fb</span>
-        </a>
-        <a href="#" class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300 group">
-          <span class="text-[10px] font-bold tracking-widest uppercase">In</span>
-        </a>
-      </div>
+    <!-- NAME -->
+    <span class="block text-5xl sm:text-6xl lg:text-7xl">
+      Tasnim Tanha
+    </span>
 
-      <a href="https://shorturl.at/xO9fT" target="_blank" rel="noopener" 
-        class="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold text-xs tracking-widest uppercase px-28 py-4 rounded-full hover:scale-105 transition">
-        <span class="material-symbols-outlined">download</span>
-        Download Resume
+    <!-- OPTIONAL: ROLE BELOW NAME -->
+    <span class="block mt-4 text-sm sm:text-base tracking-widest uppercase text-gray-400">
+      Junior Frontend Developer
+    </span>
+
+  </h1>
+</div>
+
+  <!-- RIGHT / CONTENT -->
+  <div class="lg:w-1/2 lg:pl-16 mt-10 lg:mt-8 flex flex-col items-center lg:items-start">
+
+    <p class="text-text-light dark:text-text-dark max-w-md leading-relaxed mb-8 text-center lg:text-left">
+      A Junior Frontend Developer with hands-on experience in HTML, CSS, JavaScript, and basic Node.js. Currently learning Next.js and building projects to grow my skills.
+    </p>
+
+    <!-- SOCIAL LINKS -->
+    <div class="flex gap-4 mb-8 justify-center lg:justify-start">
+      <a href="https://www.linkedin.com/in/tasnimtanha20"
+         class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center
+                hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300">
+        <span class="text-[10px] font-bold tracking-widest uppercase">Li</span>
+      </a>
+
+      <a href="https://www.facebook.com/share/1CoZeZ3jZY/"
+         class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center
+                hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300">
+        <span class="text-[10px] font-bold tracking-widest uppercase">Fb</span>
+      </a>
+
+      <a href="https://www.instagram.com/tasssniiiim"
+         class="w-10 h-10 rounded-full border border-gray-300 dark:border-zinc-600 flex items-center justify-center
+                hover:bg-gray-900 hover:text-white dark:hover:bg-primary dark:hover:text-gray-900 transition duration-300">
+        <span class="text-[10px] font-bold tracking-widest uppercase">In</span>
       </a>
     </div>
-  </main>
+
+    <!-- RESUME BUTTON -->
+    <a href="https://drive.google.com/file/d/1rCXnaTTP7Rx-r9oizgC3D6QT6AXSBjv8/view"
+       target="_blank"
+       class="inline-flex items-center justify-center gap-2 bg-primary text-gray-900 font-bold
+              text-xs tracking-widest uppercase px-10 sm:px-14 py-4 rounded-full
+              hover:scale-105 transition w-full sm:w-auto">
+      <span class="material-symbols-outlined">download</span>
+      Download Resume
+    </a>
+
+  </div>
+</main>
+
 
   <!-- About -->
-  <section class="container mx-auto px-6 lg:px-20 py-16">
+  <section id="about" class="container mx-auto px-6 lg:px-20 py-16">
+  <div class="max-w-4xl mx-auto text-center lg:text-left">
+    <!-- Heading -->
+    <h2 class="text-6xl md:text-6xl font-extrabold tracking-tight text-heading-grey/80 dark:text-gray-500 mb-12">
+      About
+    </h2>
 
-    <div class="grid lg:grid-cols-12 gap-16 items-start">
-      <div class="lg:col-span-8">
-        <h2 class="text-6xl md:text-6xl font-extrabold tracking-tight text-heading-grey/80 dark:text-gray-500 mb-12">
-  About
-</h2>
+    <!-- About Paragraphs -->
+    <p class="text-lg md:text-xl leading-relaxed text-text-light dark:text-text-dark mb-6">
+      I focus on building practical and responsive web applications with clean and maintainable code. I enjoy creating user-friendly interfaces and bringing ideas to life with HTML, CSS, JavaScript, React.js, and Tailwind CSS.
+    </p>
 
-        <p class="text-lg leading-relaxed text-text-light dark:text-text-dark">
-          I focus on building practical web applications with clean structure and responsive design. My work involves using HTML, Tailwind CSS, JavaScript, and React.js, along with backend fundamentals like Node.js, Express.js, and MongoDB.
-        </p>
-        <p class="mt-6 text-lg leading-relaxed text-text-light dark:text-text-dark">
-          I’m currently learning Next.js and improving my development workflow by building projects and following best practices.
-        </p>
+    <p class="text-lg md:text-xl leading-relaxed text-text-light dark:text-text-dark mb-6">
+      I’m continuously learning new technologies like Next.js and improving my workflow by building projects, experimenting with modern tools, and following best practices.
+    </p>
+
+    <!-- Skills Badges with Icons -->
+    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
+        <span>HTML</span>
       </div>
-
-      <div class="lg:col-span-4">
-        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border-l-4 border-primary">
-          <span class="block text-sm uppercase tracking-widest text-gray-500 mb-2">Current Role</span>
-          <span class="block text-3xl font-display font-bold text-heading-light dark:text-heading-dark">
-            Frontend Developer
-          </span>
-        </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-5 h-5" alt="CSS">
+        <span>CSS</span>
       </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React.js">
+        <span>React.js</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-5 h-5" alt="Node.js">
+        <span>Node.js</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-5 h-5" alt="Express.js">
+ 
+        <span>Express.js</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-5 h-5" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-5 h-5" alt="Firebase">
+        <span>Firebase</span>
+      </div>
+      <div class="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-sm md:text-base text-gray-700 dark:text-gray-200">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-5 h-5" alt="Tailwind CSS">
+  <span>Tailwind CSS</span>
+</div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
 <!-- Skills -->
  <section class="container mx-auto px-6 lg:px-20 py-16">
@@ -245,7 +311,7 @@
   </section>
          <!-- Projects -->
 
-<section id="projects-part-1" class="container mx-auto px-6 lg:px-20 py-16">
+<section id="projects" class="container mx-auto px-6 lg:px-20 py-16">
 
 
   <!-- Heading -->
@@ -303,12 +369,27 @@
         </div>
       </div>
 
-      <!-- Links -->
-      <div class="flex gap-6 text-gray-400">
-        <a class="hover:text-primary transition" href="#"><span class="material-icons text-2xl">code</span></a>
-        <a class="hover:text-primary transition" href="#"><span class="material-icons text-2xl">dns</span></a>
-        <a class="hover:text-primary transition" href="#"><span class="material-icons text-2xl">open_in_new</span></a>
-      </div>
+     
+     <!-- Links -->
+<div class="flex flex-wrap gap-20 text-gray-400">
+  
+  <a href="https://github.com/tasnim951/local-food-server" class="flex items-center gap-1 hover:text-primary transition">
+    <span class="material-icons text-xl">dns</span>
+    <span class="text-sm font-medium">Server</span>
+  </a>
+
+  <a href="https://github.com/tasnim951/local-food-client" class="flex items-center gap-1 hover:text-primary transition">
+    <span class="material-icons text-xl">code</span>
+    <span class="text-sm font-medium">Client</span>
+  </a>
+
+  <a href="https://grand-medovik-1777fc.netlify.app/" class="flex items-center gap-1 hover:text-primary transition">
+    <span class="material-icons text-xl">open_in_new</span>
+    <span class="text-sm font-medium">Live</span>
+  </a>
+
+</div>
+
     </div>
   </div>
 
@@ -329,7 +410,8 @@
 
       <!-- Tech Stack -->
       <div class="mb-8">
-        <div class="flex flex-wrap gap-x-6 gap-y-3 justify-end">
+       <div class="flex flex-wrap gap-x-6 gap-y-3 justify-start lg:justify-end">
+
           <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
             <img class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGX7gKJeEdprt9R8E4iaJL0pHTrCTCepycKnGZ73RvWf2XXYqLvtDrxShv6VooQkwvbhkfvubjvu03OmaPLrYIw8_QMeNAlazkzxHitXp96PfxbOCqbzxwR_0a8i-saLvmUtByKRfC7tSRl3H5M97WA0uH_EYHWOpzIZrP_3Z1EKqBcoZKUjcwRR0MxazLv1t55ZWtPYcOLatxaoGj4aUtkxmVjZC9sex7iYc4BuAXpMYH-w5GwRQ0zlZl0tUwa50OMWu_3oAr2CpV">
             <span>React.js</span>
@@ -349,11 +431,24 @@
         </div>
       </div>
 
+     
       <!-- Links -->
-      <div class="flex gap-6 text-gray-400 justify-end">
-        <a class="hover:text-primary transition" href="#"><span class="material-icons text-2xl">code</span></a>
-        <a class="hover:text-primary transition" href="#"><span class="material-icons text-2xl">open_in_new</span></a>
-      </div>
+<div class="flex flex-wrap gap-20 text-gray-400">
+  
+  
+
+  <a href="https://github.com/tasnim951/game-hub-repo" class="flex items-center gap-1 hover:text-primary transition">
+    <span class="material-icons text-xl">code</span>
+    <span class="text-sm font-medium">Client</span>
+  </a>
+
+  <a href="https://nimble-torte-4651c3.netlify.app/" class="flex items-center gap-1 hover:text-primary transition">
+    <span class="material-icons text-xl">open_in_new</span>
+    <span class="text-sm font-medium">Live</span>
+  </a>
+
+</div>
+
     </div>
   </div>
 
