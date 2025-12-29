@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-300 antialiased selection:bg-primary selection:text-white;
+    min-height: max(884px, 100dvh);
+  }
+}
