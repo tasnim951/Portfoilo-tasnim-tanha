@@ -8,7 +8,7 @@ export default function Footer() {
                     {/* Copyright */}
                     <p className="text-sm text-gray-500 dark:text-gray-400 tracking-wide">
                         © 2025 <span className="font-semibold text-gray-700 dark:text-gray-200">
-                            Tasnim Akther Tanha
+                            
                         </span>. All rights reserved.
                     </p>
 

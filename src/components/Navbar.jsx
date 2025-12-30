@@ -20,7 +20,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <div className="text-2xl font-bold text-heading-light dark:text-heading-dark">
-            Tasnim Akther Tanha<span className="text-primary">.</span>
+            Tasnim Tanha<span className="text-primary">.</span>
           </div>
 
           {/* Desktop Nav */}

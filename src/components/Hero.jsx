@@ -20,14 +20,18 @@ export default function Hero() {
                     I'm
                 </motion.span>
 
-                <motion.h1
-                    className="block text-5xl sm:text-6xl lg:text-7xl font-bold text-heading-light dark:text-heading-dark"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                >
-                    Tasnim Tanha
-                </motion.h1>
+               <motion.h1
+    className="block font-bold text-heading-light dark:text-heading-dark leading-tight text-center lg:text-left"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.1 }}
+>
+    <span className="block text-5xl sm:text-6xl lg:text-7xl">Tasnim</span>
+   
+
+    <span className="block text-5xl sm:text-6xl lg:text-7xl">Tanha</span>
+</motion.h1>
+
 
                 <motion.span
                     className="block mt-4 text-sm sm:text-base tracking-widest uppercase text-gray-400"
