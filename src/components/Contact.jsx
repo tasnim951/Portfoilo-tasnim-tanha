@@ -34,13 +34,14 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="container mx-auto px-6 lg:px-20 py-16"
+      className="container mx-auto px-6 lg:px-20 pt-6 pb-16
+"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      {/* Heading */}
+      
       <motion.div
         className="mb-10"
         initial={{ opacity: 0, y: 20 }}
@@ -54,7 +55,7 @@ export default function Contact() {
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-16 items-start">
-        {/* Left Info */}
+       
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -83,7 +84,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* Contact Form */}
+      
         <motion.div
           className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
           initial={{ opacity: 0, x: 40 }}
@@ -119,7 +120,7 @@ export default function Contact() {
               focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition"
             />
 
-            {/* Submit Button */}
+          
             <motion.button
               type="submit"
               disabled={loading}

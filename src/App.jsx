@@ -9,7 +9,10 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark
+     text-gray-800 dark:text-gray-100 font-sans transition-colors 
+     duration-300 antialiased selection:bg-primary selection:text-white 
+     min-h-screen">
             
             {/* 🔔 Toast container (ADD THIS) */}
             <Toaster position="top-right" />
