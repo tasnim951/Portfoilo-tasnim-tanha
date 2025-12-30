@@ -46,7 +46,9 @@ export default function About() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            I focus on building practical and responsive web applications with clean and maintainable code. I enjoy creating user-friendly interfaces and bringing ideas to life with HTML, CSS, JavaScript, React.js, and Tailwind CSS.
+     Hello! <br />
+     This is Tasnim Akther Tanha ~ an aspiring junior frontend developer. <br />  
+   I focus on building practical and responsive web applications with clean and maintainable code. I enjoy creating user-friendly interfaces and bringing ideas to life with HTML, CSS, JavaScript, React.js, and Tailwind CSS.
                         </motion.p>
 
                         <motion.p
