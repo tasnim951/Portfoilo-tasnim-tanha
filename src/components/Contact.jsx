@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const formRef = useRef();
@@ -19,13 +20,12 @@ export default function Contact() {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
           formRef.current.reset();
           setLoading(false);
         },
-        (error) => {
-          alert("Failed to send message ❌");
-          console.error(error);
+        () => {
+          toast.error("Failed to send message. Try again!");
           setLoading(false);
         }
       );
@@ -34,19 +34,19 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
+      className="container mx-auto px-6 lg:px-20 py-16"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="container mx-auto px-6 lg:px-20 py-16"
     >
       {/* Heading */}
       <motion.div
+        className="mb-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="mb-10"
       >
         <h1 className="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-500 tracking-tight">
           Contact
@@ -85,11 +85,11 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.div
+          className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
         >
           <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
             <input
@@ -119,13 +119,14 @@ export default function Contact() {
               focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition"
             />
 
-            {/* Button */}
+            {/* Submit Button */}
             <motion.button
               type="submit"
               disabled={loading}
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-full
+              className="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold
+              text-xs tracking-widest uppercase px-8 py-4 rounded-full
               disabled:opacity-60 transition-all duration-300"
             >
               <span className="material-icons text-sm">send</span>

@@ -5,10 +5,15 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Toaster } from "react-hot-toast";
 
 function App() {
     return (
         <div className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white min-h-screen">
+            
+            {/* 🔔 Toast container (ADD THIS) */}
+            <Toaster position="top-right" />
+
             <Navbar />
             <Hero />
             <About />
