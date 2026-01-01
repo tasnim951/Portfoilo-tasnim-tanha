@@ -11,20 +11,22 @@ export default function Navbar() {
     setIsDark(!isDark);
   };
 
-  const navItems = ["Home", "About", "Projects", "Contact"];
+  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+      
+      {/* SAME WIDTH AS ALL OTHER SECTIONS */}
+      <div className="mx-auto max-w-6xl px-6 lg:px-20">
+        <div className="flex h-16 items-center justify-between">
           
-          {/* Logo */}
-          <div className="text-2xl font-bold text-heading-light dark:text-heading-dark">
+          {/* Logo (mobile padding fixed automatically by px-6) */}
+          <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-heading-light dark:text-heading-dark">
             Tasnim Tanha<span className="text-primary">.</span>
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-xs">
+          <div className="hidden md:flex gap-8 lg:gap-10 uppercase font-bold tracking-widest text-[12px] lg:text-sm">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -44,7 +46,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Icons */}
+          {/* Right Controls */}
           <div className="flex items-center gap-3">
             {/* Dark Mode */}
             <button
@@ -52,18 +54,18 @@ export default function Navbar() {
               aria-label="Toggle Dark Mode"
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
             >
-              <span className="material-icons text-gray-600 dark:text-gray-300">
+              <span className="material-icons text-lg lg:text-xl text-gray-600 dark:text-gray-300">
                 {isDark ? "light_mode" : "brightness_4"}
               </span>
             </button>
 
-            {/* Hamburger (Mobile) */}
+            {/* Mobile Menu */}
             <button
               className="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle Menu"
             >
-              <span className="material-icons text-gray-600 dark:text-gray-300">
+              <span className="material-icons text-lg text-gray-600 dark:text-gray-300">
                 {isOpen ? "close" : "menu"}
               </span>
             </button>

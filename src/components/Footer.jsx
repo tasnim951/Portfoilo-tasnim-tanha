@@ -1,38 +1,50 @@
 export default function Footer() {
-    return (
-        <footer className="border-t border-gray-200 dark:border-gray-800">
-            <div className="container mx-auto px-6 lg:px-20 py-10">
+  return (
+    <footer className="border-t border-gray-200 dark:border-gray-800">
+      <div className="mx-auto max-w-6xl px-6 lg:px-20 py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Copyright */}
+          <p className="text-sm text-gray-500 dark:text-gray-400 tracking-wide text-center md:text-left">
+            © 2025{" "}
+            <span className="font-semibold text-gray-700 dark:text-gray-200">
+              Tasnim Akther Tanha
+            </span>
+            . All rights reserved.
+          </p>
 
-                    {/* Copyright */}
-                    <p className="text-sm text-gray-500 dark:text-gray-400 tracking-wide">
-                        © 2025 <span className="font-semibold text-gray-700 dark:text-gray-200">
-                            
-                        </span>. All rights reserved.
-                    </p>
+          {/* Social Links */}
+          <div className="flex gap-6">
+            <a
+              href="https://www.linkedin.com/in/tasnimtanha20"
+              target="_blank"
+              aria-label="LinkedIn"
+              className="text-gray-400 hover:text-primary transition-transform duration-300 hover:-translate-y-1"
+            >
+              <i className="fab fa-linkedin text-xl"></i>
+            </a>
 
-                    {/* Social Links */}
-                    <div className="flex gap-6 text-gray-400">
-                        {/* LinkedIn */}
-                        <a href="https://www.linkedin.com/in/tasnimtanha20" target="_blank" className="hover:text-primary transition" aria-label="LinkedIn">
-                            <i className="fab fa-linkedin fa-lg"></i>
-                        </a>
+            <a
+              href="https://github.com/tasnim951"
+              target="_blank"
+              aria-label="GitHub"
+              className="text-gray-400 hover:text-primary transition-transform duration-300 hover:-translate-y-1"
+            >
+              <i className="fab fa-github text-xl"></i>
+            </a>
 
-                        {/* GitHub */}
-                        <a href="https://github.com/tasnim951" target="_blank" className="hover:text-primary transition" aria-label="GitHub">
-                            <i className="fab fa-github fa-lg"></i>
-                        </a>
+            <a
+              href="https://www.facebook.com/share/1CoZeZ3jZY/"
+              target="_blank"
+              aria-label="Facebook"
+              className="text-gray-400 hover:text-primary transition-transform duration-300 hover:-translate-y-1"
+            >
+              <i className="fab fa-facebook text-xl"></i>
+            </a>
+          </div>
 
-                        {/* Facebook */}
-                        <a href="https://www.facebook.com/share/1CoZeZ3jZY/" target="_blank" className="hover:text-primary transition" aria-label="Facebook">
-                            <i className="fab fa-facebook fa-lg"></i>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-        </footer>
-    );
+        </div>
+      </div>
+    </footer>
+  );
 }

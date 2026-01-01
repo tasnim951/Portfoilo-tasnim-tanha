@@ -12,33 +12,38 @@ export default function Skills() {
     ];
 
     return (
-        <section className="container mx-auto px-6 lg:px-20 py-16">
-            {/* Heading */}
-            <motion.h2
-                className="text-5xl md:text-6xl font-extrabold tracking-tight text-heading-grey/80 dark:text-gray-500 mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-            >
-                Skills
-            </motion.h2>
+      <section 
+    id="skills"
+    className="mx-auto max-w-6xl px-6 lg:px-20 py-16"
+>
+    {/* Heading */}
+    <motion.h2
+        className="text-5xl md:text-6xl font-extrabold tracking-tight text-heading-grey/80 dark:text-gray-500 mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+    >
+        Skills
+    </motion.h2>
 
-            {/* Skills grid with reduced spacing */}
-            <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 md:gap-y-6"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={{
-                    visible: { transition: { staggerChildren: 0.15 } },
-                }}
-            >
-                {skills.map((skill) => (
-                    <SkillCard key={skill.name} skill={skill} />
-                ))}
-            </motion.div>
-        </section>
+    {/* Skills grid */}
+    <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 md:gap-y-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+            visible: { transition: { staggerChildren: 0.15 } },
+        }}
+    >
+        {skills.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+        ))}
+    </motion.div>
+</section>
+
+
     );
 }
 

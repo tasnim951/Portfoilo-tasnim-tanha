@@ -34,72 +34,63 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="container mx-auto px-6 lg:px-20 pt-6 pb-16
-"
+      className="mx-auto max-w-6xl px-6 lg:px-20 py-16"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      
-      <motion.div
-        className="mb-10"
+      {/* Section Heading */}
+      <motion.h2
+        className="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-400 tracking-tight mb-16"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-500 tracking-tight">
-          Contact
-        </h1>
-      </motion.div>
+        Contact
+      </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-16 items-start">
-       
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+      {/* Two-column layout */}
+      <motion.div
+        className="flex flex-col lg:flex-row bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Left Side: Contact Info */}
+        <div className="lg:w-1/2 p-10 flex flex-col justify-center gap-6">
+          <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
             Let’s work together
-          </h2>
-
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-md">
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
             I’m open to frontend opportunities, internships, and collaborative projects.
             Feel free to send me a message anytime.
           </p>
 
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 text-sm">
+          <div className="space-y-4 text-gray-600 dark:text-gray-300 text-sm">
             <div className="flex items-center gap-3">
               <span className="material-icons text-primary">mail</span>
               <span>tasnimakthertanha@gmail.com</span>
             </div>
-
             <div className="flex items-center gap-3">
               <span className="material-icons text-primary">location_on</span>
               <span>Sylhet, Bangladesh</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-      
-        <motion.div
-          className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+        {/* Right Side: Form */}
+        <div className="lg:w-1/2 p-10 flex flex-col justify-center">
+          <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
               required
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-sm
-              focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition"
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm
+              focus:outline-none focus:ring-2 focus:ring-primary transition"
             />
 
             <input
@@ -107,8 +98,8 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-sm
-              focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition"
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm
+              focus:outline-none focus:ring-2 focus:ring-primary transition"
             />
 
             <textarea
@@ -116,17 +107,16 @@ export default function Contact() {
               rows="5"
               placeholder="Write your message..."
               required
-              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3 text-sm resize-none
-              focus:outline-none focus:ring-2 focus:ring-primary focus:scale-[1.01] transition"
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm resize-none
+              focus:outline-none focus:ring-2 focus:ring-primary transition"
             />
 
-          
             <motion.button
               type="submit"
               disabled={loading}
-              whileHover={{ scale: 1.06 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-primary text-gray-900 font-bold
+              className="inline-flex items-center justify-center gap-2 bg-primary text-gray-900 font-bold
               text-xs tracking-widest uppercase px-8 py-4 rounded-full
               disabled:opacity-60 transition-all duration-300"
             >
@@ -134,8 +124,8 @@ export default function Contact() {
               {loading ? "Sending..." : "Send Message"}
             </motion.button>
           </form>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </motion.section>
   );
 }

@@ -5,7 +5,7 @@ export default function Projects() {
     {
       name: "Food Lover Network",
       description:
-        "A comprehensive platform for food enthusiasts to discover, share, and rate recipes.Featuring a user profile management system",
+        "A comprehensive platform for food enthusiasts to discover, share, and rate recipes. Featuring a user profile management system.",
       image: "/images/project1.png",
       techs: [
         "mongodb/mongodb-original.svg",
@@ -59,9 +59,9 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="container mx-auto px-6 lg:px-20 py-16">
+    <section id="projects" className="mx-auto max-w-6xl px-6 lg:px-20 py-16">
       <motion.h1
-        className="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-500 mb-20"
+        className="text-5xl md:text-6xl font-extrabold text-heading-grey/80 dark:text-gray-500 mb-12 text-center lg:text-left"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -69,9 +69,11 @@ export default function Projects() {
         Projects
       </motion.h1>
 
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
+      <div className="flex flex-col gap-10">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
     </section>
   );
 }
@@ -79,77 +81,60 @@ export default function Projects() {
 function ProjectCard({ project }) {
   return (
     <motion.div
-      className={`flex flex-col md:flex-row items-center mb-24 gap-14 lg:gap-24
-        ${project.reverse ? "md:flex-row-reverse" : ""}
-      `}
-      initial={{ opacity: 0, y: 30 }}
+      className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all
+        ${project.reverse ? "md:flex-row-reverse" : ""}`}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
       {/* Image */}
-      <motion.div
-        className="w-full md:w-1/2 flex justify-center"
-        whileHover={{ scale: 1.05 }}
-      >
+      <div className="w-full md:w-1/2 flex justify-center">
         <img
           src={project.image}
           alt={project.name}
-          className="w-full max-w-[420px] object-contain"
+          className="w-full max-w-md rounded-lg object-contain"
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
       <div
-        className={`w-full md:w-1/2 flex flex-col items-center text-center
-          ${project.reverse
-            ? "md:items-end md:text-right"
-            : "md:items-start md:text-left"}
-        `}
+        className={`w-full md:w-1/2 flex flex-col gap-4
+          ${project.reverse ? "md:items-end md:text-right" : "md:items-start md:text-left"}`}
       >
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
           {project.name}
         </h2>
+        <p className="text-gray-500 dark:text-gray-400 text-base">{project.description}</p>
 
-        <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm md:text-base">
-          {project.description}
-        </p>
-
-        
         {/* Tech Stack */}
-<div
-  className={`flex flex-wrap gap-x-6 gap-y-3 mb-8
-    justify-center
-    ${project.reverse ? "md:justify-end" : "md:justify-start"}
-  `}
->
-  {project.techs.map((tech, i) => (
-    <div key={i} className="flex items-center gap-2 text-sm text-gray-500">
-      <img
-        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}`}
-        className="w-5 h-5"
-        alt=""
-      />
-      <span>{tech.split("/")[0]}</span>
-    </div>
-  ))}
+        <div className={`flex flex-wrap gap-3 mb-4
+          ${project.reverse ? "md:justify-end" : "md:justify-start"}`}
+        >
+          {project.techs.map((tech, i) => (
+            <div key={i} className="flex items-center gap-2 text-sm text-gray-500">
+              <img
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}`}
+                className="w-5 h-5"
+                alt={tech.split("/")[0]}
+              />
+              <span>{tech.split("/")[0]}</span>
+            </div>
+          ))}
 
-  {project.extraTech && (
-    <div className="flex items-center gap-2 text-sm">
-      <span className={`material-icons ${project.extraTech.color}`}>
-        {project.extraTech.icon}
-      </span>
-      <span>{project.extraTech.label}</span>
-    </div>
-  )}
-</div>
+          {project.extraTech && (
+            <div className="flex items-center gap-2 text-sm">
+              <span className={`material-icons ${project.extraTech.color}`}>
+                {project.extraTech.icon}
+              </span>
+              <span>{project.extraTech.label}</span>
+            </div>
+          )}
+        </div>
 
-
-        
+        {/* Links */}
         <div
-          className={`flex flex-wrap gap-6 sm:gap-10 md:gap-14 text-gray-400
-            justify-center
-            ${project.reverse ? "md:justify-end" : "md:justify-start"}
-          `}
+          className={`flex flex-wrap gap-6 text-gray-400
+            ${project.reverse ? "md:justify-end" : "md:justify-start"}`}
         >
           {project.links.map((link, i) => (
             <a
