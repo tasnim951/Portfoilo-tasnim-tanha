@@ -16,11 +16,11 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
       
-      {/* SAME WIDTH AS ALL OTHER SECTIONS */}
+     
       <div className="mx-auto max-w-6xl px-6 lg:px-20">
         <div className="flex h-16 items-center justify-between">
           
-          {/* Logo (mobile padding fixed automatically by px-6) */}
+          {/* Logo  */}
           <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-heading-light dark:text-heading-dark">
             Tasnim Tanha<span className="text-primary">.</span>
           </div>

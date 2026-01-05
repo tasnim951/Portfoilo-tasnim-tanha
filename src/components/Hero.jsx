@@ -34,7 +34,6 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <span className="block text-6xl sm:text-7xl">Tasnim</span>
-          <span className="block text-6xl sm:text-7xl">Akther</span>
           <span className="block text-6xl sm:text-7xl">Tanha</span>
         </motion.h1>
 

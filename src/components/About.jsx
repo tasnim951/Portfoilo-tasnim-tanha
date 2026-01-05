@@ -5,7 +5,7 @@ export default function About() {
         <section id="about" className="mx-auto max-w-7xl px-6 lg:px-28 py-16">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-10">
                 
-                {/* Left: About Content */}
+              
                {/* Left: About Content */}
 <div className="w-full lg:w-1/2 text-left lg:pl-8">
   <motion.h2
