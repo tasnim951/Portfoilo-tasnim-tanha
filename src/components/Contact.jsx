@@ -51,7 +51,7 @@ export default function Contact() {
         Contact
       </motion.h2>
 
-      {/* Glass Container */}
+      {/* Glass / Pink Container */}
       <motion.div
         className="
           flex flex-col lg:flex-row rounded-3xl overflow-hidden
@@ -104,6 +104,7 @@ export default function Contact() {
             onSubmit={sendEmail}
             className="flex flex-col gap-6"
           >
+            {/* Name */}
             <input
               type="text"
               name="name"
@@ -116,9 +117,11 @@ export default function Contact() {
                 text-black placeholder-gray-700
                 focus:ring-2 focus:ring-primary outline-none
                 dark:bg-white/10 dark:border-white/20 dark:text-white
+                dark:placeholder-gray-400
               "
             />
 
+            {/* Email */}
             <input
               type="email"
               name="email"
@@ -131,9 +134,11 @@ export default function Contact() {
                 text-black placeholder-gray-700
                 focus:ring-2 focus:ring-primary outline-none
                 dark:bg-white/10 dark:border-white/20 dark:text-white
+                dark:placeholder-gray-400
               "
             />
 
+            {/* Message */}
             <textarea
               name="message"
               rows="5"
@@ -146,9 +151,11 @@ export default function Contact() {
                 text-black placeholder-gray-700
                 focus:ring-2 focus:ring-primary outline-none
                 dark:bg-white/10 dark:border-white/20 dark:text-white
+                dark:placeholder-gray-400
               "
             />
 
+            {/* Submit Button */}
             <motion.button
               type="submit"
               disabled={loading}
